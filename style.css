@@ -1,0 +1,407 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* FOR NAVIGATION DESIGN */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .brand {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-list li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .nav-list li:hover{
+    background-color: #ccc;
+  }
+  
+  .nav-list a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar form {
+    position: relative;
+  }
+  
+  .search-bar input[type="search"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .search-bar button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .search-bar button i {
+    margin-left: 10px;
+    font-size: 18px;
+    color: #ccc;
+  }
+/* FOR HOME DESIGN */
+  #slider {
+    margin: 30px auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+ }
+ #slider input[type=radio] {
+    display: none;
+ }
+ #slider label {
+    cursor:pointer;
+    text-decoration: none;
+ }
+ #slides {
+    padding: 10px;
+    border: 3px solid #ccc;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+ }
+ #overflow {
+    width: 100%;
+    overflow: hidden;
+ }
+ #slide1:checked ~ #slides .inner {
+    margin-left: 0;
+ }
+ #slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+ }
+ #slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+ }
+ #slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+ }
+ #slides .inner {
+    transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    width: 400%;
+    line-height: 0;
+    height: 300px;
+ }
+ #slides .slide {
+    width: 25%;
+    float:left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+ }
+ #slides .slide_1 {
+    background: #00171F;
+ }
+ #slides .slide_2 {
+    background: #003459;
+ }
+ #slides .slide_3 {
+    background: #007EA7;
+ }
+ #slides .slide_4 {
+    background: #00A8E8;
+ }
+ #controls {
+    margin: -180px 0 0 0;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+ }
+ #controls label {
+    transition: opacity 0.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+ }
+ #controls label:hover {
+    opacity: 1;
+ }
+ #bullets {
+    margin: 150px 0 0;
+    text-align: center;
+ }
+ #bullets label {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius:100%;
+    background: #ccc;
+    margin: 0 10px;
+ }
+ #slide1:checked ~ #bullets label:nth-child(1),
+ #slide2:checked ~ #bullets label:nth-child(2),
+ #slide3:checked ~ #bullets label:nth-child(3),
+ #slide4:checked ~ #bullets label:nth-child(4) {
+    background: #444;
+ }
+ @media screen and (max-width: 900px) {
+    #slide1:checked ~ #controls label:nth-child(2),
+    #slide2:checked ~ #controls label:nth-child(3),
+    #slide3:checked ~ #controls label:nth-child(4),
+    #slide4:checked ~ #controls label:nth-child(1),
+    #slide1:checked ~ #controls label:nth-last-child(2),
+    #slide2:checked ~ #controls label:nth-last-child(3),
+    #slide3:checked ~ #controls label:nth-last-child(4),
+    #slide4:checked ~ #controls label:nth-last-child(1) {
+       margin: 0;
+    }
+    #slides {
+       max-width: calc(100% - 140px);
+       margin: 0 auto;
+    }
+ }
+ ::-webkit-scrollbar{
+    display: none;
+ }
+ .item-container {
+    background-color: #ccc;
+    width: calc(25% - 60px);
+    max-width: 250px;
+    max-height: 350px;
+    min-height: 350px;
+    margin: 30px;
+    display: inline-flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+.item-container .items{
+    margin: 20px;
+    position: relative;
+}
+.item-container .items p{
+    max-height: 100%;
+    text-align: justify;
+}
+.item-container .items .item-btn{
+    margin-top: 10px;
+    text-align: end;
+    width: 100%;
+}
+.item-container img {
+    width: 100%;
+}
+
+/*  FOR LOGIN DESIGN */
+.login-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .login-form {
+    width: 450px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form h2 {
+    text-align: center;
+  }
+  
+  .input-field {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-field input, .input-field select {
+    width: 100%;
+    padding: 10px 35px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-field input:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
+  .input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+  }
+  .login-btns{
+    margin: 0 2px;
+    padding: 3px;
+  }
+  .login-btns:hover{
+    cursor: pointer;
+  }
+  .workspace-container{
+      text-align: center;
+  }
+  .workspace-container h3{
+   margin-top: 20px;
+   margin-bottom: -20px;
+   background-color: #ccc;
+   text-align: left;
+   padding: 5px 0 5px 15px;
+   width: 950px;
+   margin-left: auto;
+   margin-right: auto;
+  }
+  #logout-link{
+   text-decoration: none;
+   font-size: 14px;
+  }
+  .totals{
+   display: flex;
+   justify-content: center;
+  }
+  .totals-p{
+   color: #003459;
+   font-size: 5rem;
+   margin-top: 15px;
+  }
+  .item-details .h3-border{
+   text-decoration: underline;
+  }
+  #owner-dash-img img{
+   width: 500px;
+  }
+  #owner-dash-img .owner-dash-img-container{
+   margin: 0 0 20px 0;
+   text-align: center;
+  }
+  #owner-dash-img .owner-dash-img-container img{
+   margin: 0 15px;
+  }
+  .owner-prop{
+   width: 100%;
+   text-align: end;
+   
+
+  }
+  .owner-prop .owner-prop-containers{
+   margin-top: 20px;
+   display: inline-flex;
+   margin-right: 15px;
+   
+  }
+  .owner-prop .owner-prop-containers:nth-child(1) button, 
+  .owner-prop .owner-prop-containers:nth-child(3) button{
+      border-radius: 15px;
+      color:#8e8e8e;
+      border-color: #ccc;
+  }
+  .owner-prop .owner-prop-containers:nth-child(2) input{
+   border-radius: 15px;
+  }
+  .owner-prop .owner-prop-containers:nth-child(2) i {
+   font-size: 1.4rem;
+   padding-top: 9px;
+   margin-left: -45px;
+   margin-right: 25px;
+   color: #8e8e8e;
+  }
+  .owner-prop .owner-prop-containers input,
+  .owner-prop .owner-prop-containers button{
+   padding: 5px 15px;
+   font-size: 1.5rem;
+  }
+  .owner-table{
+   margin: 30px auto;
+   width: 80%;
+   border-collapse: collapse;
+  }
+  .owner-table .actions-td{
+   text-align: center;
+  }
+  .owner-table .actions-td a{
+   padding: 0 5px;
+  }
+  .owner-table th, .owner-table td {
+   border: 1px solid #ddd;
+   padding: 8px;
+   text-align: left;
+   font-size: 1.2rem;
+ }
+ .show-modal-container{
+   display: none;
+}.showmodal{
+   display: block;
+}
+ #deletemodal{
+   background-color: #b9b9b9;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   width: 450px;
+   height: 300px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-radius: 8px;
+ }
+ #deletemodal .block-d{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+#deletemodal .block-d .button-container{
+   margin-top: 20px;
+}
+#deletemodal .block-d h3{
+   font-size: 1.8rem;
+}
+#deletemodal .block-d .button-container button {
+   font-size: 1.5rem;
+   padding: 5px 15px;
+}
+#deletemodal .block-d .button-container button:hover{
+   cursor: pointer;
+}
+.deletemodallink{
+   text-decoration: underline;
+   color: blue
+}
+.deletemodallink:hover{
+   cursor: pointer;
+}

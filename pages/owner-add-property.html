@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collab Space | Add Property</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://kit.fontawesome.com/2ee3da4ec4.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="brand">Collab Space</a>
+      <ul class="nav-list">
+        <li><a href="owner-dashboard.html">Dashboard</a></li>
+        <li><a href="owner-property.html">Owner Property</a></li>
+      </ul>
+      <div class="search-bar">
+        <form action="#">
+            <h3>Welcome User: <span>#</span></h3>
+            <a href="#" id="logout-link">Logout</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div>
+    <div class="login-container">
+        <form class="login-form">
+          <div class="input-field">
+            <label for="propertyname">Property Name</label>
+            <input type="text" id="ap-propertyname" name="propertyname">
+          </div>
+          <div class="input-field">
+            <label for="email">Property Description</label>
+            <input type="text" id="ap-propertydesc" name="email">
+          </div>
+          <div class="input-field">
+            <label for="location">Location</label>
+            <input type="text" id="ap-location" name="location">
+          </div>
+          <div class="input-field">
+            <label for="price">Price</label>
+            <input type="text" id="ap-price" name="phonenumber">
+          </div>
+          <div class="input-field">
+            <label for="uploadImg">Upload Img</label>
+            <input type="file">
+          </div>
+          <button type="button" onclick="AddPropertyAddBtn()" class="login-btns">Add</button>
+          <button type="button" onclick="AddPropertyBackBtn()" class="login-btns">Back</button>
+        </form>
+      </div>
+  </div>
+
+
+
+
+  <script src="../script.js"></script>
